@@ -17,6 +17,5 @@ public class FeelingLucky {
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='logo']")));
 	Assert.assertEquals("https://www.google.com/doodles", driver.getCurrentUrl());
 	driver.quit();
-	wait.until(ExpectedConditions.)
 	}
 }
