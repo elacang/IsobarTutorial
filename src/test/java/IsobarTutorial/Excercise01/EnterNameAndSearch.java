@@ -20,7 +20,9 @@ public class EnterNameAndSearch {
 	searchBox.sendKeys(Keys.ENTER);
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	wait.until(ExpectedConditions.elementToBeClickable(By.id("ires")));
-	Assert.assertTrue(driver.findElements(By.xpath("//div[@id='ires']")).size() != 0);
+	driver.findElement(By.xpath("//a[contains(.,'Eirol John Lacang Profiles | Facebook')]")).click();
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//i[contains(.,'Facebook logo')]")));
+	Assert.assertEquals("https://www.facebook.com/public/Eirol-John-Lacang", driver.getCurrentUrl());
 	driver.close();
 	}
 	
